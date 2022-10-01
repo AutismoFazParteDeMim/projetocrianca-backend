@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.DecimalMax;
+import javax.validation.constraints.Digits;
 import java.math.BigDecimal;
 
 
@@ -23,8 +25,12 @@ public class Profissionais {
     @Column
     private String endereço;
     @Column
-    private Double latitude;
+    @Digits(integer = 4, fraction = 7)
+    private BigDecimal latitude;
     @Column
-    private Double longitude;
+    @Digits(integer = 4, fraction = 7)
+    private BigDecimal longitude;
+    @Column
+    private String contato;
 
 }
