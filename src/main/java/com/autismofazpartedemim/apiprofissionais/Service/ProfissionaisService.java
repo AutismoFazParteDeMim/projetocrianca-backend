@@ -28,7 +28,7 @@ public class ProfissionaisService {
     }
 
     public ResponseEntity<List<Profissionais>> getAll() {
-        return ResponseEntity.status(HttpStatus.FOUND).body(pr.findAll());
+        return ResponseEntity.status(HttpStatus.OK).body(pr.findAll());
     }
 
     public ResponseEntity<Object> getById(Long id) {
@@ -36,7 +36,7 @@ public class ProfissionaisService {
         if (!profissionaisOptional.isPresent()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Profissional não encontrado");
         }
-        return ResponseEntity.status(HttpStatus.FOUND).body(profissionaisOptional.get());
+        return ResponseEntity.status(HttpStatus.OK).body(profissionaisOptional.get());
     }
 }
 

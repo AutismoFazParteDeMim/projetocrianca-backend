@@ -2,9 +2,9 @@
 spring:
   datasource:
     driverClassName: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/projetoprofissionais?createDatabaseIfNotExist=true
-    username: postgres
-    password: postgres
+    url: jdbc:postgresql://projetocrianca.c46lzpht7sam.us-east-1.rds.amazonaws.com:5432/projetoprofissionais?createDatabaseIfNotExist=true
+    username: projetocrianca
+    password: "#Projetocrianca12345678"
   jpa:
     show-sql: true
     properties:
