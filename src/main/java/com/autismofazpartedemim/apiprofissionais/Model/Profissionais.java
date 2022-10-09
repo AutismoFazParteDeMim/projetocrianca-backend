@@ -32,5 +32,12 @@ public class Profissionais {
     private BigDecimal longitude;
     @Column
     private String contato;
-
+    @Column
+    private String horarioFuncionamento;
+    @Column
+    private String diasFuncionamento;
+    @Column
+    private String descricao;
+    @Column
+    private String email;
 }

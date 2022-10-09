@@ -27,4 +27,14 @@ public class ProfissionaisDTO {
     private BigDecimal longitude;
     @NotBlank
     private String contato;
+    @NotBlank
+    private String horarioFuncionamento;
+    @NotBlank
+    private String diasFuncionamento;
+
+    private String descricao;
+    @NotBlank
+    @NotNull
+    private String email;
+
 }
