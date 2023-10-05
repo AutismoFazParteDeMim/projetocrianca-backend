@@ -4,17 +4,13 @@ import com.autismofazpartedemim.apiprofissionais.DTO.ProfissionaisDTO;
 import com.autismofazpartedemim.apiprofissionais.Model.Profissionais;
 
 import com.autismofazpartedemim.apiprofissionais.Service.ProfissionaisService;
-import com.autismofazpartedemim.apiprofissionais.Utils.ImagemUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
+import jakarta.validation.Valid;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/autismofazpartedemim")

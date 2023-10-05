@@ -1,21 +1,22 @@
 package com.autismofazpartedemim.apiprofissionais.Utils;
 
-import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.*;
+
+import javax.imageio.ImageIO;
 
 public class ImagemUtil {
 
     public static byte[] toByteArray(BufferedImage logo) throws IOException {
 
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        ImageIO.write(logo, "png", baos);
-        byte[] logoFormat = baos.toByteArray();
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        ImageIO.write(logo, "png", stream);
+        byte[] logoFormat = stream.toByteArray();
 
         return logoFormat;
     }
 
-    public static BufferedImage toBuferedImage(byte[] logo) throws IOException {
+    public static BufferedImage toBufferedImage(byte[] logo) throws IOException {
         InputStream is = new ByteArrayInputStream(logo);
         BufferedImage logoFormat = ImageIO.read(is);
 

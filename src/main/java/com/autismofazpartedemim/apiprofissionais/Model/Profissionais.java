@@ -4,9 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
-import javax.validation.constraints.DecimalMax;
-import javax.validation.constraints.Digits;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Digits;
 import java.math.BigDecimal;
 
 
