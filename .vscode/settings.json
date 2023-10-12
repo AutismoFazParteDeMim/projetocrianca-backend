@@ -1,7 +1,20 @@
 {
-  "java.configuration.updateBuildConfiguration": "interactive",
+  "java.configuration.updateBuildConfiguration": "automatic",
   "cSpell.words": [
     "apiprofissionais",
-    "autismofazpartedemim"
-  ]
+    "autismofazpartedemim",
+    "dtos",
+    "jakarta",
+    "nullable",
+    "projetocrianca",
+    "servlet",
+    "Servlet",
+    "unisociesc"
+  ], 
+  "material-icon-theme.folders.associations": {
+    "repositories" : "database",
+    "dtos" : "template",
+    "specifications" : "rules",
+    "professionals": "admin"
+  },
 }
