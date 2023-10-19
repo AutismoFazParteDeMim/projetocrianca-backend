@@ -27,7 +27,7 @@ public class ProfessionalController {
   @Autowired
   ProfessionalService professionalService;
 
-  @GetMapping(value = "/index")
+  @GetMapping()
   public ResponseEntity<List<Professional>> getAllProfessionals() {
     var professionals = professionalService.getAllProfessionals();
     return ResponseEntity.status(HttpStatus.OK).body(professionals);
@@ -39,7 +39,7 @@ public class ProfessionalController {
     return ResponseEntity.status(HttpStatus.OK).body(professional);
   }
 
-  @PostMapping(value = "/")
+  @PostMapping()
   public ResponseEntity<Void> createProfessional(@RequestBody @Valid CreateProfessionalDto dto) {
     professionalService.createProfessional(dto);
     return ResponseEntity.status(HttpStatus.OK).body(null);

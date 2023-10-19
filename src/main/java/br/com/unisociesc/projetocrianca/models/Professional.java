@@ -1,6 +1,7 @@
 package br.com.unisociesc.projetocrianca.models;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import jakarta.persistence.Column;
@@ -14,6 +15,7 @@ import java.math.BigDecimal;
 import java.util.UUID;
 
 @Data
+@Builder
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor

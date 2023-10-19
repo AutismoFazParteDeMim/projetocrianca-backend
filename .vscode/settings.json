@@ -3,18 +3,29 @@
   "cSpell.words": [
     "apiprofissionais",
     "autismofazpartedemim",
+    "csrf",
     "dtos",
     "jakarta",
+    "jupiter",
+    "mockito",
     "nullable",
     "projetocrianca",
     "servlet",
     "Servlet",
+    "Succ",
     "unisociesc"
-  ], 
+  ],
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 110,
+  "editor.rulers": [
+    110
+  ],
   "material-icon-theme.folders.associations": {
     "repositories" : "database",
     "dtos" : "template",
     "specifications" : "rules",
     "professionals": "admin"
   },
+  "java.compile.nullAnalysis.mode": "automatic",
 }

@@ -6,6 +6,14 @@
   "configurations": [
     {
       "type": "java",
+      "name": "ProjetoCriancaApplication",
+      "request": "launch",
+      "mainClass": "br.com.unisociesc.projetocrianca.ProjetoCriancaApplication",
+      "projectName": "apiprofissionais",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
       "name": "ApiprofissionaisApplication",
       "request": "launch",
       "mainClass": "br.com.unisociesc.projetocrianca.ApiprofissionaisApplication",
