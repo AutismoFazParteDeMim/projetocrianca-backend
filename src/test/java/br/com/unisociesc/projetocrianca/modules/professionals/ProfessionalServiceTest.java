@@ -22,8 +22,8 @@ import org.mockito.Mock;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import br.com.unisociesc.projetocrianca.dtos.professional.CreateProfessionalDto;
-import br.com.unisociesc.projetocrianca.dtos.professional.UpdateProfessionalDto;
+import br.com.unisociesc.projetocrianca.dtos.professionals.CreateProfessionalDto;
+import br.com.unisociesc.projetocrianca.dtos.professionals.UpdateProfessionalDto;
 import br.com.unisociesc.projetocrianca.models.Professional;
 import br.com.unisociesc.projetocrianca.modules.ModuleHelper;
 import br.com.unisociesc.projetocrianca.modules.professionals.errors.ProfessionalNotFoundException;
@@ -102,13 +102,6 @@ public class ProfessionalServiceTest {
     assertEquals(modelProperties, resultProperties);
   }
 
-  // @Test
-  // public void createProfessionalWithEmptyDto() {
-  // var dto = CreateProfessionalDto.builder().build();
-
-  // service.createProfessional(dto);
-  // }
-
   @Test
   public void updateProfessionalSucc() {
     var dto = UpdateProfessionalDto.builder()
@@ -130,10 +123,10 @@ public class ProfessionalServiceTest {
     assertEquals(professionalId, result.getId());
   }
 
-  // @Test
-  // public void updateProfessionalWithEmptyDto() {
+  @Test
+  public void updateProfessionalWithEmptyDto() {
 
-  // }
+  }
 
   @Test
   public void deleteProfessionalSucc() {

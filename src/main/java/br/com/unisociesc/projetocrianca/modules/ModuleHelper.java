@@ -7,6 +7,8 @@ import java.util.UUID;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Component;
 
+import br.com.unisociesc.projetocrianca.modules.professionals.errors.ProfessionalNotFoundException;
+
 @Component
 public class ModuleHelper {
   private ModuleHelper() {
@@ -24,7 +26,7 @@ public class ModuleHelper {
    */
   public <T, C> void checkFindById(Optional<T> entity, Class<C> className, String paramName, String param) {
     if (entity.isEmpty()) {
-      // throw new ShopNotFoundException(className, paramName, param);
+      throw new ProfessionalNotFoundException(className, paramName, param);
     }
   }
 
@@ -42,7 +44,7 @@ public class ModuleHelper {
    */
   public <L, C> void checkFindByIdList(List<L> entity, Class<C> className, String paramName, String param) {
     if (entity.isEmpty()) {
-      // throw new ShopNotFoundException(className, paramName, param);
+      throw new ProfessionalNotFoundException(className, paramName, param);
     }
   }
 

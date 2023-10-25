@@ -1,8 +1,8 @@
 package br.com.unisociesc.projetocrianca.modules.professionals.services;
 
 import br.com.unisociesc.projetocrianca.Utils;
-import br.com.unisociesc.projetocrianca.dtos.professional.CreateProfessionalDto;
-import br.com.unisociesc.projetocrianca.dtos.professional.UpdateProfessionalDto;
+import br.com.unisociesc.projetocrianca.dtos.professionals.CreateProfessionalDto;
+import br.com.unisociesc.projetocrianca.dtos.professionals.UpdateProfessionalDto;
 import br.com.unisociesc.projetocrianca.models.Professional;
 import br.com.unisociesc.projetocrianca.modules.ModuleHelper;
 import br.com.unisociesc.projetocrianca.modules.professionals.errors.ProfessionalCopyException;

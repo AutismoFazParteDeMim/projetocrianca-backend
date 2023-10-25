@@ -2,6 +2,11 @@ package br.com.unisociesc.projetocrianca.modules.professionals.errors;
 
 public class ProfessionalNotFoundException extends ProfessionalException {
 
+  @Override
+  public String getCode() {
+    return "404";
+  }
+
   public ProfessionalNotFoundException(Class<?> clazz, String message, Throwable cause, Object... paramsMap) {
     super(clazz, message, cause, paramsMap);
   }

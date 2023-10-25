@@ -9,15 +9,17 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.unisociesc.projetocrianca.dtos.professional.CreateProfessionalDto;
+import br.com.unisociesc.projetocrianca.dtos.professionals.CreateProfessionalDto;
+import br.com.unisociesc.projetocrianca.dtos.professionals.UpdateProfessionalDto;
 import br.com.unisociesc.projetocrianca.models.Professional;
 import br.com.unisociesc.projetocrianca.modules.professionals.services.ProfessionalService;
 
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import jakarta.validation.Valid;
 
 @RestController
@@ -42,6 +44,13 @@ public class ProfessionalController {
   @PostMapping()
   public ResponseEntity<Void> createProfessional(@RequestBody @Valid CreateProfessionalDto dto) {
     professionalService.createProfessional(dto);
+    return ResponseEntity.status(HttpStatus.OK).body(null);
+  }
+
+  @PutMapping("/{id}")
+  public ResponseEntity<Void> updateProfessional(@RequestParam(name = "id") UUID id,
+      @RequestBody @Valid UpdateProfessionalDto dto) {
+    professionalService.updateProfessional(id, dto);
     return ResponseEntity.status(HttpStatus.OK).body(null);
   }
 

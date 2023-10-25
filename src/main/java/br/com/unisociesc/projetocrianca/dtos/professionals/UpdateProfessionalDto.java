@@ -1,4 +1,4 @@
-package br.com.unisociesc.projetocrianca.dtos.professional;
+package br.com.unisociesc.projetocrianca.dtos.professionals;
 
 import java.math.BigDecimal;
 

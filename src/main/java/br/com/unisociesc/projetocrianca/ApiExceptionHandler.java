@@ -21,7 +21,8 @@ import org.springframework.web.servlet.NoHandlerFoundException;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import br.com.unisociesc.projetocrianca.errors.ApiError;
-
+import br.com.unisociesc.projetocrianca.modules.professionals.errors.ProfessionalCopyException;
+import br.com.unisociesc.projetocrianca.modules.professionals.errors.ProfessionalNotFoundException;
 import jakarta.validation.ConstraintViolationException;
 import lombok.extern.slf4j.Slf4j;
 
@@ -124,6 +125,26 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 
   // Custom Exceptions
 
-  
+  @ExceptionHandler(ProfessionalCopyException.class)
+  protected ResponseEntity<Object> handleConstraintViolation(
+      ProfessionalCopyException exception) {
+    ApiError apiError = new ApiError(HttpStatus.INTERNAL_SERVER_ERROR);
+    apiError.setMessage(exception.getLocalizedMessage());
+    if (exception.getCause() != null) {
+      apiError.setDebugMessage(exception.getCause().getLocalizedMessage());
+    }
+    return buildResponseEntity(apiError);
+  }
+
+  @ExceptionHandler(ProfessionalNotFoundException.class)
+  protected ResponseEntity<Object> handleConstraintViolation(
+      ProfessionalNotFoundException exception) {
+    ApiError apiError = new ApiError(HttpStatus.NOT_FOUND);
+    apiError.setMessage(exception.getLocalizedMessage());
+    if (exception.getCause() != null) {
+      apiError.setDebugMessage(exception.getCause().getLocalizedMessage());
+    }
+    return buildResponseEntity(apiError);
+  }
 
 }

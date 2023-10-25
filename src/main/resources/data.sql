@@ -20,7 +20,7 @@ VALUES
   'contato@amajoinville.org', 
   -26.2652280, 
   -48.8503570, 
-  'AMA - Associação de Amigos do Autista', 
+  'AME - Associação de Amigos do Autista', 
   '07:30h - 17:30h', 
   'Segunda - Sexta'
 ),

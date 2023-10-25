@@ -1,15 +1,19 @@
 {
   "java.configuration.updateBuildConfiguration": "automatic",
   "cSpell.words": [
+    "APAE",
     "apiprofissionais",
     "autismofazpartedemim",
     "csrf",
     "dtos",
+    "Giuliari",
     "jakarta",
     "jupiter",
     "mockito",
     "nullable",
     "projetocrianca",
+    "Rolin",
+    "Saguaçu",
     "servlet",
     "Servlet",
     "Succ",
@@ -22,9 +26,9 @@
     110
   ],
   "material-icon-theme.folders.associations": {
-    "repositories" : "database",
-    "dtos" : "template",
-    "specifications" : "rules",
+    "repositories": "database",
+    "dtos": "template",
+    "specifications": "rules",
     "professionals": "admin"
   },
   "java.compile.nullAnalysis.mode": "automatic",

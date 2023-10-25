@@ -44,6 +44,8 @@ public final class Utils {
     List<String> nullProperties = new ArrayList<>();
     for (java.beans.PropertyDescriptor pd : propertyDescriptorList) {
       if (src.getPropertyValue(pd.getName()) == null) {
+        System.out.println(pd.getName());
+        System.out.println("==========================");
         nullProperties.add(pd.getName());
       }
     }
